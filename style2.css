@@ -1,0 +1,294 @@
+:root{	
+	--color_back: #eee3c7;
+	--color_dark: #ddcea0;
+	--color_hover: #fbf0d0;
+	--color_hover_border: white;
+}
+
+@media all and (min-height: 700px) {
+	body {
+		position: relative;
+		transform: translate(0%,20%);
+	}	
+	
+	h1{			
+		font-size: 30px;	
+	}		
+}
+
+
+body{
+	display: flex;
+	flex-direction: column;	
+	align-items:center;	
+	align-content: center;		
+	background-color: var(--color_back);	
+}
+
+
+h1{
+	color: grey;	
+	font-size: 22px;	
+}
+
+
+img{
+	margin: 3px auto;
+}
+
+
+label{	
+	margin: 5px;	
+}
+
+
+input[type="number"]{
+	width: 3em;	
+	border: none;
+}
+
+
+input[type="text"]{
+	text-transform: capitalize;	
+	width: 280px;		
+}
+
+input[type="tel"]{
+	width: 80px;
+	
+}
+
+::placeholder{	
+	color:black;
+	opacity:0.2;
+}	
+
+.master{
+	display: flex;
+	flex-direction: column;		
+	align-content: center;	
+	justify-content: space-between;	
+	width: 440px;
+	height: 545px;
+	border: 3px solid var(--color_dark);
+	margin: auto;
+}
+
+
+.tab_year{
+	display: flex;
+	flex-direction: row;	
+	align-items: center;
+	justify-content: center;	
+	height: 35px;
+	font-size: 20px;	
+	margin: 3px;	
+}
+
+
+.tab_month{
+	display: flex;
+	flex-direction: row;	
+	align-items: center;
+	justify-content: space-between;		
+	height: 30px;	
+	margin: 3px;
+	padding: 2px;
+}
+
+
+.btn_cal {		
+	font-size: 20px;
+	width:65px;	
+	border: none;
+	border-radius: 2px;
+	text-decoration: none;
+	font-style: center;	
+	cursor: pointer;	
+	background-color: var(--color_dark);
+	color: black;
+}
+
+
+.btn_cal:hover{
+	background-color: white;
+	color: black;	
+}
+
+
+.tab_day_name{
+	display: flex;
+	flex-direction: row;	
+	align-content: center;	
+	justify-content: space-between;		
+	margin: 3px;
+	padding: 2px;
+}
+
+
+.tab_day{
+	display: flex;
+	flex-direction: row;	
+	flex-wrap: wrap;
+	align-content: center;	
+	justify-content: space-between;		
+	margin: 3px;
+	padding: 2px;	
+}
+
+
+.day_name{
+	display: flex;
+	flex-direction: row;	
+	justify-content: center;	
+	align-items: center;	
+	width: 50px;
+	height: 25px;
+	border-radius: 8px;
+	margin: 3px;	
+	background-color: var(--color_dark);	
+}
+
+.day{
+	display: flex;
+	flex-direction: row;	
+	justify-content: center;	
+	align-items: center;	
+	width: 50px;
+	height: 50px;	
+	border: 1px solid var(--color_dark);	
+	border-radius: 8px;
+	margin: 3px;
+	cursor: pointer;	
+}
+
+
+.day_dis{	
+	display: flex;
+	flex-direction: row;	
+	justify-content: center;	
+	align-items: center;	
+	width: 50px;
+	height: 50px;	
+	border: 1px solid transparent;		
+	border-radius: 8px;
+	margin: 3px;	
+	border: #red;
+}
+
+
+.day:hover{
+	color: var(--color_dark);	
+	background-color: var(--color_hover);
+	border-color: var(--color_hover_border);	
+}
+
+
+.new_window{		
+	width: 440px;
+	height: 545px;	
+	background-color: var(--color_hover);	
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;	
+	justify-content: space-evenly; 
+	align-items: center;
+	
+	animation: animIn 0.5s ease;	
+}
+
+
+.n_w{	
+	background-color: var(--color_dark);
+	color: black;
+	border-radius: 8px;
+	padding: 5px;
+	margin: 12px;
+}
+
+.n_h{	
+	display: flex;
+	flex-direction: row;	
+	color: black;
+	border-radius: 8px;
+	padding: 5px;
+	margin: 12px;
+	
+}
+
+
+.btn_visit{	
+	text-align: center;
+	padding: 10px 23px;
+	background-color: var(--color_dark);
+	cursor:pointer;
+	border: none;	
+	border-radius: 8px;
+	margin: 6px;
+}
+
+
+.btn_visit:hover{
+	color: var(--color_dark);
+	background-color: var(--color_hover_border);
+}
+
+
+.windowVisitAdd{
+	width: 440px;
+	height: 545px;	
+	background-color: var(--color_hover);	
+	color: black;
+	font-family: times new roman;	
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;	
+	justify-content: center;	
+	align-items: center;	
+	
+	animation: animOut 4s ;	
+}
+
+
+.windowVisitAddDiv{	
+	margin: 15px 0px;		
+	font-size: 20px;	
+}
+
+.windowVisitAddDivName{	
+	margin: 25px 0px;	
+	text-transform: capitalize;	
+	font-size: 24px;	
+}
+
+
+@keyframes animIn {
+	0% { 
+	transform:scale(0.1);
+	}      
+
+	100% { 
+	transform:scale(1);
+	}
+}
+
+
+@keyframes animOut {
+	0% { 
+	transform:scale(1);	
+	} 
+
+	15% { 
+	transform:scale(0.9);	
+	}	
+
+
+	80% { 
+	transform:scale(0.9);	
+	} 	
+
+	100% { 
+	transform:scale(0.1);	
+	}
+}
+
